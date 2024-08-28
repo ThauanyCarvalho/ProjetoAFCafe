@@ -8,7 +8,7 @@ header {
     display: flex;
 }
 header img{
-    width: 150px;
+    width: 100px;
 }
 main{
     flex: 1;
@@ -29,6 +29,24 @@ main{
 }
 .menu li{
     margin-bottom: 10px ;
-
-
+}
+.menu a{
+text-decoration: none;
+color: #fff;
+padding: 15px;
+display: block;
+}
+.menu a:hover{
+background-color: #6e581a;
+color: black;
+}
+.conteudo{
+    padding: 10px;
+    color: black;
+}
+footer{
+    flex: 0 0 auto;
+    text-align: center;
+    background-color: var(--cor-principal);
+    padding: 20px;
 }
