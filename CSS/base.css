@@ -1,0 +1,157 @@
+
+   
+body{
+background-color: #ffc0cb;
+font-family: Arial, Helvetica, sans-serif;
+color: #ed30cf;
+padding: 0%;
+margin: 0%;
+}
+.topo{
+text-align: center;
+background-color: #6F4242;
+padding: 30px;
+
+}
+.topo h1{
+font-size: 50px;
+}
+.menuTopo{
+text-align: center;
+background-color: #ffb6c1;
+overflow: hidden;
+position: sticky;
+top: 10px;
+}
+
+.menuTopo ul{
+display: inline-block;
+list-style: none;
+padding: 0;
+margin:0;
+
+
+}
+
+.menuTopo ul li{
+float: left;
+}
+
+.menuTopo a{
+    display: block;
+    color:#ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    background-color: #d6909b;
+    border-radius: 2px;
+    margin: 5px;
+}
+.menuTopo a:hover{
+background-color:null;
+color:null;
+font-weight: bold;
+
+}
+.corpo{
+    width: 1024px;
+    margin: 10px auto;
+}
+
+.corpo::after{
+display: table;
+clear: both;
+content: "";
+
+}
+
+.linha
+{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.item{
+    width: 600px;
+}
+.esquerda{
+width: 75%;
+float: left;
+}
+
+.direita{    
+width: 25%;
+float: left;
+background-color: #ffe7ea;
+padding: 5px;
+}
+
+.footer{
+ padding: 20px;
+ text-align:center;
+ background-color:#ffe7ea;
+
+}
+
+
+.destaque{
+background-color: #d6909b;
+padding: 20px;
+margin-top: 20px;
+}
+
+.imagens{
+  width: 100%;
+   
+}
+    
+.imagens img{
+   height: 300px;
+}
+.container{
+ background-image: url(../imagens/polonia.jpg);
+ height: 400px;
+ background-size: cover;
+ background-position: center;
+}
+
+.container p{
+position: relative;
+bottom: 380px;
+right: 450px;
+color: #fff;
+
+}
+@media screen and (max-width: 1024px){
+    
+    .corpo{
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+    .esquerda, .direita{
+        width: 100%;
+        padding:0;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+    .menuTopo ul li, .menuTopo a{
+    float: none;
+    width:100%;
+margin: 0;
+
+    }
+}
+
+@media screen and (max-width: 1024px){
+.corpo{
+width: 100%;
+margin:0;
+padding: 5px;
+}
+
+}
