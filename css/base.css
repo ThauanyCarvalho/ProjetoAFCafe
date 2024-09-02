@@ -17,24 +17,22 @@ body{
     flex-direction: column;
     height: 100vh;
 }
-header{
-    background: url(../IMAGENS/cafe-secando-2.png);
-     
-  }
   .menu{
       flex-basis: 250px;
       background-color: var(--cor-principal) ;
       display: flex;
-      flex-direction: column ;
+      flex-direction: row;
       margin: 0;
-      padding: 0;
-      /* flex-direction: row; */
-      
+      padding: 0;  
+      overflow: hidden;
+      position: sticky;
   }
   .menu ul{
       list-style: none;
       padding: 0;
       margin: 0;
+     
+      
   }
   .menu li{
       margin-bottom: 10px ;
@@ -83,3 +81,10 @@ header{
   .instagram{
     background-image: linear-gradient(45deg,#fcb045,#fd1d1d,#833ab4);
   }
+
+ .caixa{
+  border: 2px #000 solid ;
+  margin-left: 180px;
+  background-color: #d1c5c5;
+  padding: 30px;
+ }

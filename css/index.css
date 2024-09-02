@@ -14,6 +14,11 @@ main{
     flex: 1;
     display: flex;
 }
+
+.conteudo img{
+    background: url('IMAGENS/cafe.png');
+}
+
 footer .linha{
     display: flex;
     flex-direction: row;
