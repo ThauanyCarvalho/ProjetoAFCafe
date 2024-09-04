@@ -15,10 +15,6 @@ main{
     display: flex;
 }
 
-.conteudo img{
-    background: url('IMAGENS/cafe.png');
-}
-
 footer .linha{
     display: flex;
     flex-direction: row;
@@ -29,3 +25,14 @@ footer .linha{
 footer .item{
     width: 400px;
 }
+
+section{
+    background-image: url('../IMAGENS/cafe.png');
+    width: 100%;
+}
+.caixa{
+    border: 0px #000 solid ;
+    margin-left: 180px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+   }
+   

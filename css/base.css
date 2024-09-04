@@ -11,11 +11,11 @@
     box-sizing: border-box;
 }
 body{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
   .menu{
       flex-basis: 250px;
@@ -28,68 +28,55 @@ body{
       position: sticky;
   }
   .menu ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-     
-      
+    list-style: none;
+    padding: 0;
+    margin: 0;  
   }
-  .menu li{
-      margin-bottom: 10px ;
-  }
+  
   .menu a{
-  text-decoration: none;
-  color: #fff;
-  padding: 15px;
-  display: block;
-  }
-  .menu a:hover{
-  background-color: #aa914c;
-  color: rgb(255, 255, 255);
-  }
-  .conteudo{
-      padding: 10px;
-      color: rgb(20, 20, 20);
-  }
-  footer{
-      flex: 0 0 auto;
-      text-align: center;
-      background-color: var(--cor-principal);
-      padding: 20px;
-  }
-
-  footer .rede-social{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 30px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  footer a{
     text-decoration: none;
     color: #fff;
+    padding: 15px;
     display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-  }
-  .whastsapp{
-    background-color:rgb(37, 211, 102)
-  }
-  .instagram{
-    background-image: linear-gradient(45deg,#fcb045,#fd1d1d,#833ab4);
-  }
+    }
+    .menu a:hover{
+      background-color: #aa914c;
+      color: rgb(255, 255, 255);
+      }
+      .conteudo{
+        padding: 10px;
+        color: rgb(255, 255, 255);
+    }
+    footer{
+        flex: 0 0 auto;
+        text-align: center;
+        background-color: var(--cor-principal);
+        padding: 20px;
+    }
+  
+    footer .rede-social{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    footer a{
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
+    .whastsapp{
+      background-color:rgb(37, 211, 102)
+    }
+    .instagram{
+      background-image: linear-gradient(45deg,#fcb045,#fd1d1d,#833ab4);
+    }
 
- .caixa{
-  border: 2px #000 solid ;
-  margin-left: 180px;
-  background-image: url("../IMAGENS/cafe.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 30px;
- }
- .conteudo.foto{
-  width: 100%;
- }
+
+
