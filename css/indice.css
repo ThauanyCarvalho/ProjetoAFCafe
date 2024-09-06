@@ -45,7 +45,7 @@ main {
 }
 
 .menu a:hover {
-    background-color: #6e581a;
+    background-color: #706128;
     color: rgb(0, 0, 0);
 }
 
@@ -53,6 +53,7 @@ main {
     padding: 0px;
     font-size: 40px;
     color: rgb(0, 0, 0);
+    
 }
 
 .conteudo img {
@@ -79,4 +80,15 @@ footer {
     text-align: center;
     background-color: var(--cor-principal);
     padding: 20px;
+}
+.conteudo div.licor img {
+    width: 500px;
+    height: auto;
+}
+.conteudo .licor  {
+    display: flex;
+    justify-content: space-around;
+}
+.conteudo div.fundo_cafe{
+    filter: grayscale(0.8);
 }
