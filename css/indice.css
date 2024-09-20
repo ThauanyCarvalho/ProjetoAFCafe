@@ -7,6 +7,7 @@ header {
     background-color: var(--cor-principal);
     padding: 0.7rem 6rem;
     display: flex;
+    position: sticky;
 }
 
 header img {
@@ -31,17 +32,10 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.menu li {
     margin-bottom: 10px;
-}
-
-.menu a {
     text-decoration: none;
     color: #fff;
     padding: 15px;
-    display: block;
 }
 
 .menu a:hover {
@@ -53,7 +47,11 @@ main {
     padding: 0px;
     font-size: 40px;
     color: rgb(0, 0, 0);
-    
+
+}
+
+.conteudo .fundo_cafe {
+    filter: grayscale(0.8);
 }
 
 .conteudo img {
@@ -61,18 +59,32 @@ main {
     margin: 0 auto;
     border: black 3px solid;
 }
-.conteudo .texto{
-    font-size: 80px;
-    margin-top: 150px;
-}
-.conteudo div.cafe_embalado img {
+
+.conteudo .cafe_embalado img {
     width: 500px;
     height: auto;
+    margin-top: 50%;
 }
 
-.conteudo .cafe_embalado  {
+.conteudo div.licor img {
+    width: 500px;
+    height: auto;
+    margin-top: 50%;
+    margin-bottom: 20%;
+}
+
+.conteudo .cafe_embalado {
     display: flex;
     justify-content: space-around;
+}
+
+.conteudo .licor {
+    display: flex;
+    justify-content: space-around;
+}
+.conteudo .texto {
+    font-size: 60px;
+    margin-top: 25%;
 }
 
 footer {
@@ -81,14 +93,4 @@ footer {
     background-color: var(--cor-principal);
     padding: 20px;
 }
-.conteudo div.licor img {
-    width: 500px;
-    height: auto;
-}
-.conteudo .licor  {
-    display: flex;
-    justify-content: space-around;
-}
-.conteudo div.fundo_cafe{
-    filter: grayscale(0.8);
-}
+
