@@ -5,7 +5,7 @@
    font-size: 16px;
    color: rgb(0, 0, 0);
    --font-secundaria:Roboto, sans-serif;
-   --cor-principal:rgb(235, 161, 91);
+   --cor-principal:rgb(83, 44, 9);
 }
 *{
     box-sizing: border-box;
@@ -40,13 +40,10 @@ body{
     display: block;
     }
     .menu a:hover{
-      background-color: #aa914c;
+      background-color: #49450b;
       color: rgb(255, 255, 255);
       }
-      .conteudo{
-        padding: 10px;
-        color: rgb(255, 255, 255);
-    }
+
     footer{
         flex: 0 0 auto;
         text-align: center;
