@@ -3,10 +3,10 @@
 
 :root {
   font-family: Oswald;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
+  font-size: 20px;
+  color: rgb(201, 139, 57);
   --font-secundaria: Roboto, sans-serif;
-  --cor-principal: rgb(235, 161, 91);
+  --cor-principal: #583F29;
 }
 
 * {
@@ -18,24 +18,18 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100px;
+  
 }
 
 .menu {
   flex-basis: 250px;
   background-color: var(--cor-principal);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: sticky;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .menu a {
@@ -43,11 +37,6 @@ body {
   color: #fff;
   padding: 15px;
   display: block;
-}
-
-.menu a:hover {
-  background-color: #aa914c;
-  color: rgb(255, 255, 255);
 }
 
 .conteudo {
@@ -75,8 +64,8 @@ footer a {
   text-decoration: none;
   color: #fff;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 10px;
 }
 
