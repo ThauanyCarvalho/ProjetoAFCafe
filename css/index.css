@@ -25,7 +25,11 @@ footer .linha{
 }
 footer .item{
     width: 400px;
+    color: white;
 }
+footer p{
+    color: #fff;
+  }
 
 .flex-container{
     background-size: cover;
