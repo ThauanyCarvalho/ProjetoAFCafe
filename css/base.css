@@ -25,14 +25,18 @@ body{
       margin: 0;
       padding: 0;  
       overflow: hidden;
-      position: sticky;
-  }
+      position: sticky;  
+      text-align: center;
+     }
   .menu ul{
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;  
   }
-  
+  .munu ul li{
+    display: inline-block;
+    margin: auto;
+  }
   .menu a{
     text-decoration: none;
     color: #fff;
@@ -47,7 +51,7 @@ body{
     footer{
         flex: 0 0 auto;
         text-align: center;
-        background-color: var(--cor-principal);
+        background-color: rgb(134, 78, 31);
         padding: 20px;
     }
   
@@ -56,8 +60,6 @@ body{
       flex-direction: row;
       justify-content: space-around;
       font-size: 30px;
-      align-items: center;
-      flex-wrap: wrap;
     }
   
     footer a{

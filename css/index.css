@@ -10,6 +10,9 @@ header {
 header img{
     width: 100px;
 }
+.logo{
+    margin: auto;
+}
 main{
     flex: 1;
     display: flex;
@@ -18,7 +21,7 @@ main{
 
 footer .linha{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -36,10 +39,14 @@ footer p{
     background-repeat: no-repeat;
     width: 100%;
 }
-.caixa{
-    border: 0px #000 solid ;
-    margin-left: 180px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    font-size: x-large;
+   .familia{
+    background-color: rgb(167, 127, 81);
+    border: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px ;
+    width: 70%;
+    margin-bottom: 10px;
+    text-align: center;
+ 
    }
    
