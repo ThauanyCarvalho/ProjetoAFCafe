@@ -4,9 +4,9 @@
 :root {
   font-family: Oswald;
   font-size: 20px;
-  color: rgb(201, 139, 57);
+  color: #fff;
   --font-secundaria: Roboto, sans-serif;
-  --cor-principal: #583F29;
+  --cor-principal: #8b5a2b;
 }
 
 * {
@@ -17,23 +17,14 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+  background-color: #f5f5dc;
   flex-direction: column;
   height: 100px;
   
 }
 
-.menu {
-  flex-basis: 250px;
-  background-color: var(--cor-principal);
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.menu a {
-  text-decoration: none;
+.menu a { /*formatação do texto*/
+  text-decoration: none; 
   color: #fff;
   padding: 15px;
   display: block;

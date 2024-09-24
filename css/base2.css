@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Cor de fundo clara */
+    color: #3b2e22; /* Marrom escuro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #8b5a2b; /* Marrom */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Títulos secundários */
+h2 {
+    color: #b8860b; /* Amarelo escuro */
+    margin: 15px 0;
+}
+
+/* Parágrafos */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Botões */
+.button {
+    background-color: #d2691e; /* Cor marrom clara */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #b5651d; /* Marrom mais escuro ao passar o mouse */
+}
+
+/* Seções */
+section {
+    background-color: #fff8dc; /* Cor de fundo clara */
+    border: 1px solid #8b5a2b; /* Bordas em marrom */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
+
+section img{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: auto;
+
+}
+/* Links */
+a {
+    color: #d2691e; /* Cor marrom clara */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #8b5a2b; /* Marrom */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 15px 0;
+}

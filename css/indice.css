@@ -16,7 +16,6 @@ font-size: 40px;
 
 header img {
     width: 120px;
-
 }
 
 main {
@@ -79,7 +78,6 @@ main {
 .conteudo .cafe_embalado {
     display: flex;
     justify-content: space-around;
-    background-color: #dbdbdb;
     padding: 90px;
     margin: 80px; 
     margin-top: 10px;
@@ -88,9 +86,8 @@ main {
 .conteudo .licor {
     display: flex;
     justify-content: space-around;
-    background-color: #fff8df;
     padding: 90px;
-    margin: 80px;
+    margin: 60px;
     margin-top: 10px;
 }
 .conteudo .texto {
