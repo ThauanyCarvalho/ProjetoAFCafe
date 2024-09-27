@@ -39,14 +39,16 @@ footer p{
     background-repeat: no-repeat;
     width: 100%;
 }
-   .familia{
-    background-color: rgb(167, 127, 81);
+   .produto{
+    background-color: rgb(187, 132, 69);
     border: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px ;
-    width: 70%;
+    width: 100%;
     margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
- 
+    display: flex;
+    justify-content: space-around;
    }
    
