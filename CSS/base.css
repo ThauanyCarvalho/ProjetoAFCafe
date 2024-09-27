@@ -1,3 +1,4 @@
+
 body{
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -7,31 +8,89 @@ body{
     }
 
     header{
-     background: url(café.png) no-repeat center center;
+     background: url(Imagen\ de\ café.jpeg) no-repeat center center;
      background-size: cover;
-     padding: 20px;
-     height: 200px;;
+     padding: 50px;
+     height: 300px;
+     display: flex;
     
 
     }
     
     .quadrado{
       background-color: black;
-      padding:50px;
-      height: 50px;
-      width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 50px;
+      height: 100px;
+      width: 800px;
+      margin: auto;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: large;
+      font-size: 30px;
+      opacity: 75%;
      
     }
-    .titulo-horario{
+
+    .titulo-visita{
         color: gray;
+        font-size: 20px;
+        height: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .titulo-chegue{
+        color: black;
+        font-size: 40px;
+        height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+   .titulo-funcionamento{
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 20px;
+    }
+
+    .titulo-horario1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 100%;
+       margin: auto;
+    }
+
+    .titulo-horario2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: auto;
+    }
+
+    .titulo-horario3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+        margin: auto;
+        
+    }
+
+    .titulo-endereco{
+       font-family: Arial, Helvetica, sans-serif;
+       color: gray;
+       font-size: 100%;
+       margin: auto;
+    
     }
 .titulo-produto{
-    color: red;
+    color: black;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo-contato{
+    display: none;
+}
+
+
+.titulo-cidade{
+    font-size: 20px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
    .item h1{
     text-align: center;
@@ -40,15 +99,25 @@ body{
    .item h2{
     text-align: center;
    }
+
+   .item{
+   
+  
+   }
 .item{
     font-weight: 15px;
-
     color: black;
    font-family: 'Times New Roman', Times, serif;
     font-size: large;
     text-align: left;
     margin:100px;
    
+}
+
+.linha1{
+    color: black;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
     .topo{
     text-align: center;
@@ -97,7 +166,9 @@ body{
     font-weight: bold;
     
     }
+    
     .corpo{
+        background-color: #f0e68c;
         width: 1024px;
         margin: 10px auto;
     }
@@ -139,61 +210,3 @@ body{
     }
     
     
-    .destaque{
-    background-color: #d6909b;
-    padding: 20px;
-    margin-top: 20px;
-    }
-    
-    .imagens{
-      width: 100%;
-       
-    }
-        
-    .imagens img{
-       height: 300px;
-    }
-    .container{
-     background-image: url(../imagens/polonia.jpg);
-     height: 400px;
-     background-size: cover;
-     background-position: center;
-    }
-    
-    .container p{
-    position: relative;
-    bottom: 380px;
-    right: 450px;
-    color: #fff;
-    
-    }
-    @media screen and (max-width: 1024px){
-        
-        .corpo{
-            width: 100%;
-            margin: 0;
-            padding: 5px;
-        }
-        .esquerda, .direita{
-            width: 100%;
-            padding:0;
-    }
-    
-    }
-    
-    @media screen and (max-width: 400px) {
-        .menuTopo ul li, .menuTopo a{
-        float: none;
-        width:100%;
-    margin: 0;
-    
-        }
-    }
-    
-    @media screen and (max-width: 1024px){
-   .corpo{
-    width: 100%;
-    margin:0;
-    padding: 5px;
-    }
-    }
