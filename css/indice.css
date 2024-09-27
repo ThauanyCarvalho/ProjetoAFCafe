@@ -10,8 +10,8 @@ header {
     position: sticky;
 }
 
-header .pagina{
-font-size: 40px;
+header .pagina {
+    font-size: 30px;
 }
 
 header img {
@@ -38,16 +38,21 @@ main {
     color: rgb(0, 0, 0);
 }
 
-.conteudo {
-    padding: 0px;
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-
+.menu ul {
+    display: flex;
 }
 
-.conteudo .titulo{
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    color: rgb(0, 0, 0)
+}
+
+.conteudo .titulo {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 80px;
 }
 
@@ -56,7 +61,6 @@ main {
 }
 
 .conteudo img {
-    width: 100%;
     margin: 0 auto;
     border: rgb(126, 51, 8) 7px, ridge;
 }
@@ -65,34 +69,28 @@ main {
     width: 500px;
     height: auto;
     padding: 1px;
-    margin-bottom: 20%;
 }
 
-.conteudo div.licor img {
+.conteudo .licor img {
     width: 500px;
     height: auto;
     padding: 1px;
-    margin-bottom: 20%;
 }
 
 .conteudo .cafe_embalado {
     display: flex;
     justify-content: space-around;
-    padding: 90px;
-    margin: 80px; 
-    margin-top: 10px;
+    margin-left: 20%;
 }
 
 .conteudo .licor {
     display: flex;
     justify-content: space-around;
-    padding: 90px;
-    margin: 60px;
-    margin-top: 10px;
+    margin-left: 20%;
+
 }
+
 .conteudo .texto {
     font-size: 50px;
     margin-top: 25%;
 }
-
-
