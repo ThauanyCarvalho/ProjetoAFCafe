@@ -1,157 +1,199 @@
-
-   
 body{
-background-color: #ffc0cb;
-font-family: Arial, Helvetica, sans-serif;
-color: #ed30cf;
-padding: 0%;
-margin: 0%;
-}
-.topo{
-text-align: center;
-background-color: #6F4242;
-padding: 30px;
-
-}
-.topo h1{
-font-size: 50px;
-}
-.menuTopo{
-text-align: center;
-background-color: #ffb6c1;
-overflow: hidden;
-position: sticky;
-top: 10px;
-}
-
-.menuTopo ul{
-display: inline-block;
-list-style: none;
-padding: 0;
-margin:0;
-
-
-}
-
-.menuTopo ul li{
-float: left;
-}
-
-.menuTopo a{
-    display: block;
-    color:#ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: right;
-    background-color: #d6909b;
-    border-radius: 2px;
-    margin: 5px;
-}
-.menuTopo a:hover{
-background-color:null;
-color:null;
-font-weight: bold;
-
-}
-.corpo{
-    width: 1024px;
-    margin: 10px auto;
-}
-
-.corpo::after{
-display: table;
-clear: both;
-content: "";
-
-}
-
-.linha
-{
-    display: flex;
-    justify-content: center;
     background-color: #fff;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0%;
+    margin: 0%;
+    }
 
+    header{
+     background: url(café.png) no-repeat center center;
+     background-size: cover;
+     padding: 20px;
+     height: 200px;;
+    
+
+    }
+    
+    .quadrado{
+      background-color: black;
+      padding:50px;
+      height: 50px;
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+     
+    }
+    .titulo-horario{
+        color: gray;
+    }
+.titulo-produto{
+    color: red;
+}
+   .item h1{
+    text-align: center;
+   }
+
+   .item h2{
+    text-align: center;
+   }
 .item{
-    width: 600px;
-}
-.esquerda{
-width: 75%;
-float: left;
-}
+    font-weight: 15px;
 
-.direita{    
-width: 25%;
-float: left;
-background-color: #ffe7ea;
-padding: 5px;
-}
-
-.footer{
- padding: 20px;
- text-align:center;
- background-color:#ffe7ea;
-
-}
-
-
-.destaque{
-background-color: #d6909b;
-padding: 20px;
-margin-top: 20px;
-}
-
-.imagens{
-  width: 100%;
+    color: black;
+   font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    text-align: left;
+    margin:100px;
    
 }
+    .topo{
+    text-align: center;
+    background-color: #6F4242;
+    padding: 30px;
     
-.imagens img{
-   height: 300px;
-}
-.container{
- background-image: url(../imagens/polonia.jpg);
- height: 400px;
- background-size: cover;
- background-position: center;
-}
-
-.container p{
-position: relative;
-bottom: 380px;
-right: 450px;
-color: #fff;
-
-}
-@media screen and (max-width: 1024px){
+    }
+    .topo h1{
+    font-size: 50px;
+    }
+    .menuTopo{
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: sticky;
+    top: 10px;
+    }
     
+    .menuTopo ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    
+    
+    }
+    
+    .menuTopo ul li{
+    float: left;
+    }
+    
+    .menuTopo a{
+        display: block;
+        color:#ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: right;
+        background-color: #d6909b;
+        border-radius: 2px;
+        margin: 5px;
+    }
+    .menuTopo a:hover{
+    background-color:null;
+    color:null;
+    font-weight: bold;
+    
+    }
     .corpo{
-        width: 100%;
-        margin: 0;
-        padding: 5px;
+        width: 1024px;
+        margin: 10px auto;
     }
-    .esquerda, .direita{
-        width: 100%;
-        padding:0;
-}
-
-}
-
-@media screen and (max-width: 400px) {
-    .menuTopo ul li, .menuTopo a{
-    float: none;
-    width:100%;
-margin: 0;
-
+    
+    .corpo::after{
+    display: table;
+    clear: both;
+    content: "";
+    
     }
-}
-
-@media screen and (max-width: 1024px){
-.corpo{
-width: 100%;
-margin:0;
-padding: 5px;
-}
-
-}
+    
+    .linha
+    {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+    }
+    
+    .item{
+        width: 600px;
+    }
+    .esquerda{
+    width: 75%;
+    float: left;
+    }
+    
+    .direita{    
+    width: 25%;
+    float: left;
+    background-color: #ffe7ea;
+    padding: 5px;
+    }
+    
+    .footer{
+     padding: 20px;
+     text-align:center;
+     background-color:#ffe7ea;
+    
+    }
+    
+    
+    .destaque{
+    background-color: #d6909b;
+    padding: 20px;
+    margin-top: 20px;
+    }
+    
+    .imagens{
+      width: 100%;
+       
+    }
+        
+    .imagens img{
+       height: 300px;
+    }
+    .container{
+     background-image: url(../imagens/polonia.jpg);
+     height: 400px;
+     background-size: cover;
+     background-position: center;
+    }
+    
+    .container p{
+    position: relative;
+    bottom: 380px;
+    right: 450px;
+    color: #fff;
+    
+    }
+    @media screen and (max-width: 1024px){
+        
+        .corpo{
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+        }
+        .esquerda, .direita{
+            width: 100%;
+            padding:0;
+    }
+    
+    }
+    
+    @media screen and (max-width: 400px) {
+        .menuTopo ul li, .menuTopo a{
+        float: none;
+        width:100%;
+    margin: 0;
+    
+        }
+    }
+    
+    @media screen and (max-width: 1024px){
+   .corpo{
+    width: 100%;
+    margin:0;
+    padding: 5px;
+    }
+    }
