@@ -26,16 +26,17 @@ body{
       padding: 0;  
       overflow: hidden;
       position: sticky;  
-      text-align: center;
+      text-align: left;
      }
   .menu ul{
     list-style-type: none;
     padding: 0;
     margin: 0;  
+    display: flex;
   }
-  .munu ul li{
+  .menu ul li{
     display: inline-block;
-    margin: auto;
+    margin-right: 20px;
   }
   .menu a{
     text-decoration: none;
