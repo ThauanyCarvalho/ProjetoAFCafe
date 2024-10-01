@@ -1,6 +1,6 @@
 
 body{
-    background-color: #fff;
+    background-color: #f0e68c;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     padding: 0%;
@@ -8,11 +8,12 @@ body{
     }
 
     header{
-     background: url(Imagen\ de\ café.jpeg) no-repeat center center;
+     background: url(imagen\ de\ café.jpeg) no-repeat center center;
      background-size: cover;
      padding: 50px;
      height: 300px;
      display: flex;
+
     
 
     }
@@ -27,6 +28,8 @@ body{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 30px;
       opacity: 75%;
+     border-radius: 50px;
+     
      
     }
 
@@ -83,10 +86,28 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .titulo-contato{
-    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 100%;
+    margin: auto;
 }
 
+.linha1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: #f0e68c;
+    position: relative;
+    margin: auto;
+    width: 900px;
+    height: 600px;
+    background: #fff;
 
+}
+
+.mapBox iframe{
+    width: 100%;
+    height: 100%;
+}
 .titulo-cidade{
     font-size: 20px;
     height: 30px;
@@ -100,10 +121,7 @@ body{
     text-align: center;
    }
 
-   .item{
-   
-  
-   }
+
 .item{
     font-weight: 15px;
     color: black;
@@ -193,19 +211,20 @@ body{
     .esquerda{
     width: 75%;
     float: left;
+    background-color: #fff;
     }
     
     .direita{    
     width: 25%;
     float: left;
-    background-color: #ffe7ea;
+    background-color: #fff;
     padding: 5px;
     }
     
     .footer{
      padding: 20px;
      text-align:center;
-     background-color:#ffe7ea;
+     background-color:#fff;
     
     }
     
