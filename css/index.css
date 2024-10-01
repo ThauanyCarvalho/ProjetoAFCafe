@@ -1,0 +1,61 @@
+@import url(base.css);
+header {
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-principal);
+    padding: 0.7rem 6rem;
+    display: flex;
+}
+header img{
+    width: 100px;
+}
+.logo{
+    margin: 5px;
+    float: left;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+footer .linha{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .item{
+    width: 400px;
+    color: white;
+}
+footer p{
+    color: #fff;
+  }
+
+.flex-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+   .produto{
+    background-color: rgb(187, 132, 69);
+    border: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px ;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+   }
+   .produto img{
+    height: 600px;
+    width: 600px;
+    padding: 20px;
+   }
+   
