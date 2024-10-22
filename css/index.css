@@ -6,7 +6,7 @@ header {
     background-color: var(--cor-principal);
     padding: 0.7rem 6rem;
     display: flex;
-}
+    }
 header img{
     width: 100px;
 }
@@ -53,13 +53,33 @@ footer p{
     display: flex;
     justify-content: space-around;
    }
-   .carro{
-        background-size: auto;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 300%;
-        margin: 0 auto;
-        margin-top: 10px;
-        padding: 15%;
-        background-color: rgb(145, 83, 7); 
+   .fotos{
+       margin-top: 1%;
+       margin-left: 40px;
+       margin-right:40px ;  
+       position: relative;
+   }
+   .caixa{
+    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
+    bottom: 50%; /* Espaçamento da parte inferior da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: white; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+    z-index: 10; /* Garante que a caixa fique na frente da imagem */
+   }
+.caixa-m{
+   position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
+   bottom: 30%; /* Espaçamento pra baixa ou levantar o texto*/
+   left: 55%; /* Centraliza horizontalmente */
+   transform: translateX(-60%); /* Ajusta a posição para centralizar perfeitamente */
+   background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+   color: white; /* Cor do texto */
+   padding: 15px; /* Espaçamento interno */
+   border-radius: 5px; /* Bordas arredondadas */
+   text-align: center; /* Centraliza o texto dentro da caixa */
+   z-index: 10; /* Garante que a caixa fique na frente da imagem */
    }

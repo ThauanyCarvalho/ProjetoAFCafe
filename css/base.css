@@ -6,6 +6,7 @@
    color: rgb(0, 0, 0);
    --font-secundaria:Roboto, sans-serif;
    --cor-principal:rgb(83, 44, 9);
+   background-color: #fd1d1d;
 }
 *{
     box-sizing: border-box;
