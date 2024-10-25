@@ -8,7 +8,7 @@ body{
     }
 
     header{
-     background: url(imagen\ de\ café.jpeg) no-repeat center center;
+     background: url(../Imagens/grão\ de\ café.jpeg) no-repeat center center;
      background-size: cover;
      padding: 50px;
      height: 300px;
@@ -22,13 +22,13 @@ body{
       background-color: black;
       padding: 50px;
       height: 100px;
-      width: 800px;
+      width: 700px;
       margin: auto;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 30px;
-      opacity: 75%;
-     border-radius: 50px;
+      font-size: 35px;
+      opacity: 85%;
+  
      
      
     }
@@ -90,19 +90,14 @@ body{
     color: gray;
     font-size: 100%;
     margin: auto;
+   
 }
 
-.linha1{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    background-color: #f0e68c;
-    position: relative;
-    margin: auto;
-    width: 900px;
-    height: 600px;
-    background: #fff;
-
+.titulo-telefone{
+    background-color: black;
+    
 }
+
 
 .mapBox iframe{
     width: 100%;
@@ -130,6 +125,13 @@ body{
     text-align: left;
     margin:100px;
    
+}
+.footer{
+background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
 }
 
 .linha1{
@@ -174,7 +176,6 @@ body{
         padding: 14px 16px;
         text-decoration: none;
         float: right;
-        background-color: #d6909b;
         border-radius: 2px;
         margin: 5px;
     }
@@ -186,9 +187,10 @@ body{
     }
     
     .corpo{
-        background-color: #f0e68c;
         width: 1024px;
-        margin: 10px auto;
+        background-size: cover;
+        margin: 60px auto;
+        background-color: #333;
     }
     
     .corpo::after{
@@ -221,11 +223,6 @@ body{
     padding: 5px;
     }
     
-    .footer{
-     padding: 20px;
-     text-align:center;
-     background-color:#fff;
-    
-    }
+ 
     
     
