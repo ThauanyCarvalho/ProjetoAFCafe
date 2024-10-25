@@ -62,7 +62,7 @@ footer p{
    .caixa{
     position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
     bottom: 50%; /* Espaçamento da parte inferior da imagem */
-    left: 50%; /* Centraliza horizontalmente */
+    left: 40%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
     background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     color: white; /* Cor do texto */
@@ -74,7 +74,7 @@ footer p{
 .caixa-m{
    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
    bottom: 30%; /* Espaçamento pra baixa ou levantar o texto*/
-   left: 55%; /* Centraliza horizontalmente */
+   left: 60%; /* Centraliza horizontalmente */
    transform: translateX(-60%); /* Ajusta a posição para centralizar perfeitamente */
    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
    color: white; /* Cor do texto */
@@ -82,4 +82,9 @@ footer p{
    border-radius: 5px; /* Bordas arredondadas */
    text-align: center; /* Centraliza o texto dentro da caixa */
    z-index: 10; /* Garante que a caixa fique na frente da imagem */
+   }
+
+   .carro{
+    margin-top: 10%;
+
    }
