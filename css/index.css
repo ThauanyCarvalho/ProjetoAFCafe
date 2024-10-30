@@ -1,4 +1,5 @@
 @import url(base.css);
+
 header {
     flex: 0 0 auto;
     justify-content: space-between;
@@ -7,41 +8,46 @@ header {
     padding: 0.7rem 6rem;
     display: flex;
 }
-header img{
-    width: 200px;   
-}
-.logo{
-    display: block;
-    align-items: center;
+
+header img {
+    width: 400px;
 }
 
-main{
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+main {
     flex: 1;
     display: flex;
     width: 100%;
 }
 
-footer .linha{
+footer .linha {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-footer .item{
+
+footer .item {
     width: 400px;
     color: white;
 }
-footer p{
-    color: #fff;
-  }
 
-.flex-container{
+footer p {
+    color: #fff;
+}
+
+.flex-container {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
 }
-   .produto{
+
+.produto {
     background-color: rgb(255, 255, 255);
     width: 100%;
     margin-bottom: 10px;
@@ -50,26 +56,24 @@ footer p{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-   }
-   .produto img{
-    border-bottom: 5px solid rgb(204, 204, 204);
-    height: 600px;
+}
+
+.produto img {
     width: 600px;
     padding: 20px;
     clip-path: circle(385px);
-   }
+}
 
-   .produto p{ 
-    text-align: start; 
+.produto p {
+    text-align: start;
     margin-top: 5%;
-   }
+}
 
-   .nome_produto{
+.nome_produto {
     font-size: 300%;
-   
-   }
-   .descricao{
+
+}
+
+.descricao {
     font-size: 200%;
-    word-break: ;
-   }
-   
+}
