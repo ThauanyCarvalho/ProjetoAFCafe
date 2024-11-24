@@ -3,8 +3,8 @@
 :root{
    font-family: Oswald; 
    font-size: 16px;
-   color: rgb(0, 0, 0);
    --font-secundaria:Roboto, sans-serif;
+   --cor-principal:rgb(83, 44, 9);
    --cor-principal:rgb(116, 59, 9);
    background-color: #9b580c;
 }
@@ -78,6 +78,3 @@ body{
     .instagram{
       background-image: linear-gradient(45deg,#fcb045,#fd1d1d,#833ab4);
     }
-
-
-
