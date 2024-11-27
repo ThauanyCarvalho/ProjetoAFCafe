@@ -17,38 +17,7 @@ body{
   flex-direction: column;
   height: 100vh;
 }
-  .menu{
-      flex-basis: 250px;
-      background-color: var(--cor-principal) ;
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;  
-      overflow: hidden;
-      position: sticky;  
-      text-align: left;
-     }
-  .menu ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;  
-    display: flex;
-  }
-  .menu ul li{
-    display: inline-block;
-    margin-right: 20px;
-  }
-  .menu a{
-    text-decoration: none;
-    color: #fff;
-    padding: 15px;
-    display: block;
-    }
-    .menu a:hover{
-      background-color: #49450b;
-      color: rgb(255, 255, 255);
-      }
-
+  
     footer{
         flex: 0 0 auto;
         text-align: center;
