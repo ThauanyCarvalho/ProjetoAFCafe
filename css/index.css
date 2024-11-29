@@ -33,13 +33,14 @@ footer .item{
     color: white;
 }
 footer p{
-    color: #fff;
+    color: #ffffff;
   }
 
 .flex-container{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    
 }
    .produto{
     background-color: rgb(187, 132, 69);
@@ -87,5 +88,7 @@ footer p{
    .carro{
     margin-top: 10%;
    }
-
+   h1,h3,h5{
+    color: rgb(255, 255, 255);
+   }
   
