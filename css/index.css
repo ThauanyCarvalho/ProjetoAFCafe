@@ -120,6 +120,12 @@ footer p{
         transform: scale(1.05); /* Aumenta levemente no hover */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
       }
+      .container img {
+        max-width:1000px;
+        max-height:500px;
+        width: auto;
+        float:right;
+    }
    h1,h3,h5{
     color: rgb(255, 255, 255);
    }
