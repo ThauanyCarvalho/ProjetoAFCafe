@@ -1,0 +1,92 @@
+@import url(/CSS/base.css);
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --color-khaki:#f0e68c;
+    --color-brown:#8B4513;
+    --color-dark1:#000000;
+    --color-dark2:#080808;
+    --color-dark3:#101010;
+    --color-white:#f5f5f5;
+    --color-yellow:#ffff66;
+    --color-conr:#FFF8DC;
+    --color-gray:#b2b2b2;
+    --color-cream:#ece0d1;
+    --color-cream2:#dbc1ac;
+    --color-coffe:#967259;
+    --color-coffe2:#634832;
+    --color-coffe3:	#38220f;
+}
+h1{
+    color: var(--color-dark2);
+}
+
+.tela_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+    height: 80vh;
+    background-color: var(--color-neutral-40);
+    padding: 80px;
+    display: block;
+    margin: 0 auto;
+    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+}
+.imagem_tela_login{
+    width: 7.5em;
+    height: 7.5em;
+}
+
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+button{
+    margin-inline: 5px;
+    padding: 15px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-brown);
+}
+.button_main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background-image: linear-gradient( to right, var(--color-coffe),var(--color-coffe2),var(--color-coffe3) ); ;
+    
+}
+
+@media screen and (max-width:800px) {
+    .tela_login{
+        width: 90vw;
+        height: 80vh;
+    }
+    .imagem_tela_login{
+        width: 7.5em;
+        height: 7.5em;
+    }
+    input{
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+    button{
+        margin-top: 3px;
+        width: fit-content;
+    }
+    .button_main{
+        display: flex;
+        flex-direction: column;
+    }
+}
