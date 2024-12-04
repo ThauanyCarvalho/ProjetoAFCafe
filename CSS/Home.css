@@ -1,0 +1,157 @@
+@import url(base.css);
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --color-khaki:#f0e68c;
+    --color-brown:#8B4513;
+    --color-dark1:#000000;
+    --color-dark2:#080808;
+    --color-dark3:#101010;
+    --color-white:#f5f5f5;
+    --color-yellow:#ffff66;
+    --color-conr:#FFF8DC;
+    --color-gray:#b2b2b2;
+    --color-cream:#ece0d1;
+    --color-cream2:#dbc1ac;
+    --color-coffe:#967259;
+    --color-coffe2:#634832;
+    --color-coffe3:	#38220f;
+}
+header {
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-principal);
+    padding: 0.7rem 6rem;
+    display: flex;
+    }
+header img{
+    width: 100px;
+}
+.logo{
+    margin: 5px;
+    float: left;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+.flex-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+   .produto{
+    background-color: rgb(187, 132, 69);
+    border: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px ;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+   }
+   .fotos{
+       margin-top: 1%;
+       margin-left: 40px;
+       margin-right:40px ;  
+       position: relative;
+   }
+   .caixa{
+    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
+    bottom: 40%; /* Espaçamento da parte inferior da imagem */
+    left: 70%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: white; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+    z-index: 10; /* Garante que a caixa fique na frente da imagem */
+   }
+.caixa-m{
+   position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
+   bottom:30%; /* Espaçamento pra baixa ou levantar o texto*/
+   left: 75%; /* Centraliza horizontalmente */
+   transform: translateX(-60%); /* Ajusta a posição para centralizar perfeitamente */
+   background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+   color: white; /* Cor do texto */
+   padding: 15px; /* Espaçamento interno */
+   border-radius: 5px; /* Bordas arredondadas */
+   text-align:center; /* Centraliza o texto dentro da caixa */
+   z-index: 10; /* Garante que a caixa fique na frente da imagem */
+   }
+   
+   .caixa-principal{
+    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
+    bottom: 40%; /* Espaçamento da parte inferior da imagem */
+    left: 70%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: white; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align:center; /* Centraliza o texto dentro da caixa */
+    z-index:60; /* Garante que a caixa fique na frente da imagem */
+    bottom:30%; /* Espaçamento pra baixa ou levantar o texto*/
+    left: 50%; /* Centraliza horizontalmente */
+   }
+   .link-box{
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: var(--color-cream2); /* Cor de fundo */
+        border: 2px solid #38220f; /* Borda */
+        border-radius: 8px; /* Bordas arredondadas */
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s; /* Animações */
+      }
+      
+      .link-box a {
+        text-decoration: none; /* Remove o sublinhado */
+        color: #4b3621; /* Cor do texto */
+        font-weight: bold;
+        font-size: 16px;
+      }
+      
+      .link-box:hover {
+        transform: scale(1.05); /* Aumenta levemente no hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+      }
+      .container img{
+        max-width:1000px;
+        max-height:500px;
+        width: auto;
+        float:right;
+    }
+
+    
+    @media screen {
+        .link-box{
+            margin: 0 auto; /* Centraliza o botão */
+            display: block; /* Faz o link-box ocupar toda a largura disponível */
+            width: fit-content; /* Ajusta a largura do botão ao conteúdo */
+            padding: 8px 10px;
+        }
+       
+        .container img{
+            width: auto;
+            height: 300px;
+            margin: 10%;
+        }
+        .col-md-7{
+            margin: auto;
+            margin-left: auto;
+        }
+        /*.flex-container{
+            background-size: contain; Ajusta a imagem para caber completamente 
+            background-position: center; /* Centraliza a imagem 
+            width: 100%; /*arumar o carrossel*/
+        }
+    
