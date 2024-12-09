@@ -1,3 +1,40 @@
+<?php
+// Definir variáveis para armazenar os valores do formulário
+$nome = $email = $senha = $status = '';
+
+// Verificar se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Capturar os dados do formulário
+    $nome = filter_input(INPUT_POST, 'nome');
+    $email = filter_input(INPUT_POST, 'email');
+    $senha = filter_input(INPUT_POST, 'senha');
+    $status = filter_input(INPUT_POST, 'status');
+
+    // Verificar se os campos obrigatórios não estão vazios
+    if (empty($nome) || empty($email) || empty($senha) || empty($status)) {
+        echo 'Todos os campos são obrigatórios!';
+    } else {
+        // Criar o usuário e adicionar ao banco
+        spl_autoload_register(function($class){
+            require_once 'C:/xampp/htdocs/ProjetoAFCafe/PHP/Usuario.class.php';
+        });
+        $usuario = new Usuario;
+        $usuario->setNome($nome);
+        $usuario->setEmail($email);
+        $usuario->setSenha($senha); 
+        $usuario->setStatus($status);
+
+        if ($usuario->add()) {
+            // Redireciona para outra página após sucesso
+            header('Location: usuario_div.php');
+            exit;
+        } else {
+            echo 'Erro ao inserir o usuário';
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,9 +44,9 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/base.css">
+    <link rel="stylesheet" href="../CSS/base.css">
 
-    <link rel="icon" href="/imagens/LogoMarcaSfundo.png">
+    <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
 
 <body>
@@ -34,7 +71,7 @@
             </svg>
         </button>
         <div class="logo_header">
-            <img src="/imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
+            <img src="../imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
         </div>
 
 
@@ -47,14 +84,42 @@
             <a href="Produtos.html">Produtos</a>
 
         </div>
-        <a href="Login.html" id="login">Entrar</a>
+        <a href="../Html/Login.html" id="login">Entrar</a>
     </div>
 
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
             <main>
-                    
+            <div class="container mt-3">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="row g3" enctype="multipart/form-data">
+            <div class="col-12 mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>" class="form-control">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" name="email" id="email" value="<?php echo $email; ?>" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" name="senha" id="senha" value="<?php echo $senha; ?>" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="status" class="form-label">Nivel de Acesso</label>
+                <select name="status" id="status" class="form-select">
+                    <option>Selecione o status</option>
+                    <option value="usu" <?php echo ($status == 'usu' ? 'selected' : ''); ?>>Usuário</option>
+                    <option value="admin" <?php echo ($status == 'admin' ? 'selected' : ''); ?>>Administrador</option>
+                    <option value="max" <?php echo ($status == 'max' ? 'selected' : ''); ?>>Máximo</option>
+                </select>
+            </div>
+            <div class="col-12 mb-3">
+                <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
+            </div>
+        </form>
+    </div>
+               
             </main>
     
 
@@ -131,3 +196,9 @@
 </body>
 
 </html>
+
+
+
+    
+
+

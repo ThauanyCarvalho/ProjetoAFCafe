@@ -70,6 +70,7 @@ html {
   
   a {
     background-color: transparent;
+    
   }
   
   /**
@@ -474,6 +475,8 @@ a{
     transform: scaleX(1);
   }
 
+
+  
 @keyframes showSideBar {
     from{margin-left: -100vw;} 
     to{margin-left: -10vw;}

@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/base.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="icon" href="/imagens/LogoMarcaSfundo.png">
+    <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
+    <link rel="stylesheet" href="../CSS/base.css">
+
+    <title>Lista de Produtos</title>
 </head>
 
 <body>
-
+ 
     <div class="header" id="header">
         <div class="navigation_resp" id="navigation_resp">
             <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
@@ -34,7 +36,7 @@
             </svg>
         </button>
         <div class="logo_header">
-            <img src="/imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
+            <img src="../imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
         </div>
 
 
@@ -53,9 +55,40 @@
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
+            
             <main>
-                    
-            </main>
+                <div class="containercad">
+                <div class="mb-3">
+            <a href="cadUsuario.php" class="btn btn-warning">Novo Usuario</a>
+        </div>
+
+        <div class="linha">
+            <!-- Código php inicio -->
+            <?php 
+spl_autoload_register(function ($class) {
+    require_once '../PHP/Usuario.class.php';
+}); 
+                $usuario = new Usuario;
+                $usuarios = $usuario->all();
+                foreach ($usuarios as $umusuario) {
+                 ?>
+                <div class="item-linha">
+                <h1><?php echo $umusuario->nomeUsuario ?></h1>
+                <p><?php echo $umusuario->emailUsuario ?></p>
+            </div> 
+                 <?php   
+                }
+            ?>
+            
+        </div>
+
+
+                </div>
+        
+    </main>
+
+               
+
     
 
         <footer>
@@ -64,7 +97,7 @@
                     <div>
                         
                     </div>
-                    <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+                    <img src="../imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">
@@ -123,11 +156,12 @@
     
 
 
-    <script src="../JS/Base.js"></script>
-    <script src="../JS/premio.js"></script>
+    <script src="/JS/Base.js"></script>
+    <script src="/JS/premio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
