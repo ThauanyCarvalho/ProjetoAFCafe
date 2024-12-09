@@ -1,4 +1,4 @@
-@import url(/CSS/base.css);
+@import url(./base.css);
 :root{
     --color-neutral-0: #0e0c0c;
     --color-neutral-10: #171717;
@@ -47,7 +47,7 @@ input{
     outline: none;
     font-size: 15px;
 }
-button{
+.tela_login button{
     margin-inline: 5px;
     padding: 15px;
     width: 60%;
