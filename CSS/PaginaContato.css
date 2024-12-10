@@ -1,46 +1,54 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(./base.css);
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --color-khaki:#f0e68c;
+    --color-brown:#8B4513;
+    --color-dark1:#000000;
+    --color-dark2:#080808;
+    --color-dark3:#101010;
+    --color-white:#f5f5f5;
+    --color-yellow:#ffff66;
+    --color-conr:#FFF8DC;
+    --color-gray:#b2b2b2;
+    --color-cream:#ece0d1;
+    --color-cream2:#dbc1ac;
+    --color-coffe:#967259;
+    --color-coffe2:#634832;
+    --color-coffe3:	#38220f;
 }
-
 
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
     line-height: 1.6;
     background-color: #f9f9f9;
 }
+main{
+    background-image: url(../imagens/fundodecafe.jpg)
+}
 
-
-
-
-
-.hero {
-    background: url('../Imagens/fundodecafe.jpg') no-repeat center center/cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.titulo{
     text-align: center;
 }
 
-
-.hero-content h1 {
+.hero h1 {
     font-size: 50px;
     margin-bottom: 10px;
+    color: var(--color-coffe2);
+    background-color: var(--color-neutral-40);
+    padding-inline: 1.2em;
 }
+    
 
 
-.hero-content p {
-    font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 5px;
+
+.hero{
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 
@@ -50,8 +58,10 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     gap: 20px;
 }
+
 .titulo-contato {
     font-weight: bold;
     margin-top: 20px;
@@ -60,16 +70,11 @@ body {
 }
 
 
-.info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+
 
 
 .info-item {
-    background: white;
+    background-color: var(--color-neutral-40);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -109,7 +114,10 @@ body {
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
 }
-
+section{
+    display: flex;
+    flex-direction: column;
+}
 
 .titulo-loca {
     font-size: 50px;
@@ -134,13 +142,6 @@ iframe {
 }
 
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-}
 
 @media (max-width: 768px) {
     .localizacao iframe {
