@@ -132,7 +132,35 @@ main{
             right: 100%;
         }
         }
-       
+        @media (max-width: 768px) {
+            .link-box{
+                margin: 0 auto; 
+                display: block; 
+                width: fit-content; 
+                padding: 8px 10px;
+            }
+           
+            .container img{
+                width: auto;
+                height: 250px;
+                margin: 10%;
+            }
+            .col-md-7{
+                margin: auto;
+                margin-left: auto;
+            }
+            .flex-container{
+                width: 100%;
+                right: 100%;
+            }
+            .content{
+                right: 100%;
+         
+            }
+        
+        }
+
+
       
 
     
