@@ -64,31 +64,6 @@ main{
        margin-right:40px ;  
        position: relative;
    }
-   .caixa{
-    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
-    bottom: 40%; /* Espaçamento da parte inferior da imagem */
-    left: 70%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o texto dentro da caixa */
-    z-index: 10; /* Garante que a caixa fique na frente da imagem */
-   }
-.caixa-m{
-   position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
-   bottom:30%; /* Espaçamento pra baixa ou levantar o texto*/
-   left: 75%; /* Centraliza horizontalmente */
-   transform: translateX(-60%); /* Ajusta a posição para centralizar perfeitamente */
-   background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-   color: white; /* Cor do texto */
-   padding: 15px; /* Espaçamento interno */
-   border-radius: 5px; /* Bordas arredondadas */
-   text-align:center; /* Centraliza o texto dentro da caixa */
-   z-index: 10; /* Garante que a caixa fique na frente da imagem */
-   }
-   
    .caixa-principal{
     position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
     bottom: 40%; /* Espaçamento da parte inferior da imagem */
@@ -132,11 +107,11 @@ main{
     }
 
     
-    @media screen {
+    @media (max-width: 853px) {
         .link-box{
-            margin: 0 auto; /* Centraliza o botão */
-            display: block; /* Faz o link-box ocupar toda a largura disponível */
-            width: fit-content; /* Ajusta a largura do botão ao conteúdo */
+            margin: 0 auto; 
+            display: block; 
+            width: fit-content; 
             padding: 8px 10px;
         }
        
@@ -149,9 +124,16 @@ main{
             margin: auto;
             margin-left: auto;
         }
-        /*.flex-container{
-            background-size: contain; Ajusta a imagem para caber completamente 
-            background-position: center; /* Centraliza a imagem 
-            width: 100%; /*arumar o carrossel*/
+        .flex-container{
+            width: 100%;
+            right: 100%;
         }
+        .content{
+            right: 100%;
+        }
+        }
+       
+      
+
+    
     
