@@ -21,16 +21,14 @@
 }
 
 
-body {
-    line-height: 200%;
-    background-color: #f9f9f9;
-    background: url(../imagens/fundodecafe.jpg);
-}
+
 main{
-    background: url(../imagens/fundodecafe.jpg);
+    background: url(../imagens/fundodecafe.png);
+    background-repeat: no-repeat;
+   background-size:cover;
+  
  
   
-
 }
 
 .titulo{
@@ -38,10 +36,15 @@ main{
 }
 
 .hero h1 {
-    font-size: 50px;
-    margin-bottom: 40px;
+    font-size: 60px;
+    margin-bottom: 60px;
     color: var(--color-coffe2);
     background-color: var(--color-neutral-40);
+    border: 4px solid;
+   
+ 
+
+
     
   
 }
@@ -69,6 +72,7 @@ main{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -90,6 +94,7 @@ main{
     flex: 1;
     min-width: 400px;
     text-align: center;
+ 
 }
 
 
@@ -122,16 +127,70 @@ main{
     background-color: white; 
     border: 100px  #ddd; 
     border-radius: 10px; 
+
    
 }
 
-.info-item1{
-background-color: var(--color-neutral-40);
-   
+.info-item1 {
+    background-color: var(--color-neutral-40);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+    
 }
+
+
+.info-item h2 {
+    color: black
+
+}
+
+
+.info-item p {
+    margin-bottom: 10px;
+}
+
+/*Mudança de cor das letras para black */
+.info-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
 section{
     display: flex;
     flex-direction: column;
+}
+
+.titulo{
+    font-size: 50px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.redesocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.redesocial a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width:100px;
+    color: var(--color-coffe3);
+    border-radius: 50%;
+    font-size: 40px
 }
 
 .titulo-loca {
@@ -143,8 +202,8 @@ section{
 
 
 .localizacao iframe {
-    width: 200%; 
-    height: 400px;
+    width: 100%; 
+    height: 100px;
     border: none;
     border-radius: 8px; 
    
