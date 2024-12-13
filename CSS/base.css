@@ -498,7 +498,8 @@ a{
         animation-duration: 1s;
         margin-left: -50vw; 
         z-index: 999;
-        /* align-items: center; */
+        
+        /*Alinha os itens no centro*/
         
     }
 
@@ -512,7 +513,6 @@ a{
     .logo_header{
         position:relative;
     }
-
 
 } 
 /* CONTENT */

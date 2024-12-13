@@ -57,7 +57,7 @@
     <?php
         if(filter_has_var(INPUT_POST,"salvar")) {
             #Diretório onde vamos salvar as imagens
-            $diretorio = "imagensProdutos/";
+            $diretorio = "imagensProduto";
 
             #Verificando se o diretório existe
             if(!is_dir($diretorio)){
@@ -98,7 +98,7 @@
 
             $Produtos->add() ;
 
-
+            header("Location:cadProduto.php")
         }
         ?>
 
