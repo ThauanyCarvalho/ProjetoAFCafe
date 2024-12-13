@@ -1,4 +1,4 @@
-@import url(base.css);
+@import url(./base.css);
 :root{
     --color-neutral-0: #0e0c0c;
     --color-neutral-10: #171717;
@@ -34,12 +34,10 @@ header img{
     margin: 5px;
     float: left;
 }
-
-main{
-    flex: 1;
-    display: flex;
-    width: 100%;
+.img_ponto{
+    float: left;
 }
+
 .flex-container{
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,19 +63,19 @@ main{
        position: relative;
    }
    .caixa-principal{
-    position: absolute; /* Permite que a caixa de texto fique sobre a imagem */
-    bottom: 40%; /* Espaçamento da parte inferior da imagem */
-    left: 70%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição para centralizar perfeitamente */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    color: white; /* Cor do texto */
-    padding: 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-align:center; /* Centraliza o texto dentro da caixa */
-    z-index:60; /* Garante que a caixa fique na frente da imagem */
-    bottom:30%; /* Espaçamento pra baixa ou levantar o texto*/
-    left: 50%; /* Centraliza horizontalmente */
-   }
+    position: absolute; 
+    bottom: 40%;
+    left: 70%;
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 15px; 
+    border-radius: 5px; 
+    text-align:center; 
+    z-index:60; 
+    bottom:30%; 
+    left: 50%;
+   } 
    .link-box{
         display: inline-block;
         padding: 15px 25px;
@@ -152,10 +150,20 @@ main{
             .flex-container{
                 width: 100%;
                 right: 100%;
+                margin-top: 10px;
             }
             .content{
                 right: 100%;
          
+            }
+            .caixa-principal{
+                margin-top: 200px;
+                resize: both; 
+                padding: 10px; 
+                font-size: 16px;
+            }
+            .h3{
+                margin: -0.5px;
             }
         
         }
