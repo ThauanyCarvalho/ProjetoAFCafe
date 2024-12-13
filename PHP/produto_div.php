@@ -53,35 +53,38 @@
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-    <main >
-        <div class="containercad">
+    <main class="container mt-3">
         <div class="mb-3">
-            <a href="cadProduto.php" class="btn btn-warning">Novo Produto</a>
+            <a href="cadProduto.php" class="btn btn-warning">Novo Aluno</a>
         </div>
 
         <div class="linha">
             <!-- Código php inicio -->
             <?php 
-spl_autoload_register(function ($class) {
-    require_once '../PHP/Produto.class.php';
-}); 
-                $produto = new Produto;
-                $produtos = $produto->all();
-                foreach ($produtos as $umProduto) {
-                 ?>
-                <div class="item-linha">
-                <h1><?php echo $umProduto->nomeProduto ?></h1>
-                <img src="../PHP/imagensProdutos/<?php echo $umProduto->foto ?>" alt="imagens">
-   
-            </div>
-                 <?php  
-                }
-            ?>
-            
-        </div>
+             spl_autoload_register(function ($class) {require_once "classes/{$class}.class.php";});   
+             
 
+             $produto = new Produtos;
+             $produtos = $produto->all();
+             foreach($produtos as $umProduto) {
+                ?>
+                <div class="item-linha">
+                <h1><?php echo $umProduto-> nomeProduto ?></h1>
+                <img src="imagensProdutos/<?php echo $umProduto-> imagem ?>" alt="imagens">
+                <p><?php echo $umProduto-> preco ?></p>
+                <p><?php echo $umProduto-> descricao ?></p>
+                <p><a href="edtAluno.php?id=<?php echo $umProduto-> id ?>" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></a>
+                    <a href="#" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a>
+                </p>
+            </div>
+                <?php
+             }
+
+            ?>
+            <!-- Inicio apagar -->
+            
+            <!-- fim apagar -->
         </div>
-        
     </main>
 
 

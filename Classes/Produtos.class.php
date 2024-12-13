@@ -18,13 +18,12 @@ private $imagem;
 
 public function add(){
     #Sql de Inserir
-    $sql = "INSERT INTO cad_produtos (id, nomeProduto, preco, descricao, imagem) VALUES (:id, :nomeProduto, :preco, :descricao, :imagem)";
+    $sql = "INSERT INTO cad_produtos (nomeProduto, preco, descricao, imagem) VALUES (:nomeProduto, :preco, :descricao, :imagem)";
 
     #Preparar a declaração usando a classe Database
     $stmt = Database::prepare($sql);
 
     #atribuindo os valores aos parâmetros
-    $stmt->bindParam(":id", $this->id) ;
     $stmt->bindParam(":nomeProduto", $this->nome) ;
     $stmt->bindParam(":preco", $this->preco) ;
     $stmt->bindParam(":descricao", $this->descricao) ;
