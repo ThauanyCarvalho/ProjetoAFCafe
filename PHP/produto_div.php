@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Lista Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/base.css">
+    <link rel="stylesheet" href="../CSS/base.css">
 
-    <link rel="icon" href="/imagens/LogoMarcaSfundo.png">
+    <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             </svg>
         </button>
         <div class="logo_header">
-            <img src="/imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
+            <img src="../imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
         </div>
 
 
@@ -53,10 +53,39 @@
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-            <main>
-                     
-            </main>
-    </div>
+    <main >
+        <div class="containercad">
+        <div class="mb-3">
+            <a href="cadProduto.php" class="btn btn-warning">Novo Produto</a>
+        </div>
+
+        <div class="linha">
+            <!-- Código php inicio -->
+            <?php 
+spl_autoload_register(function ($class) {
+    require_once '../PHP/Produto.class.php';
+}); 
+                $produto = new Produto;
+                $produtos = $produto->all();
+                foreach ($produtos as $umProduto) {
+                 ?>
+                <div class="item-linha">
+                <h1><?php echo $umProduto->nomeProduto ?></h1>
+                <img src="../PHP/imagensProdutos/<?php echo $umProduto->foto ?>" alt="imagens">
+   
+            </div>
+                 <?php  
+                }
+            ?>
+            
+        </div>
+
+        </div>
+        
+    </main>
+
+
+    
 
         <footer>
             <div id="footer_content">
@@ -118,6 +147,7 @@
                 2024 copyright reserved
             </div>
         </footer>
+    </div>
 
     
 
@@ -125,6 +155,10 @@
     <script src="../JS/Base.js"></script>
     <script src="../JS/premio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
