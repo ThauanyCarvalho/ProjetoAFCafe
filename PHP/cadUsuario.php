@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div>
                         
                     </div>
-                    <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+                    <img src="./imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">
