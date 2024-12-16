@@ -130,7 +130,7 @@ header img{
             right: 100%;
         }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 1368px) {
             .link-box{
                 margin: 0 auto; 
                 display: block; 
@@ -157,13 +157,14 @@ header img{
          
             }
             .caixa-principal{
-                margin-top: 200px;
+                max-width: 1024px;
+                margin-top: -200px;
                 resize: both; 
-                padding: 10px; 
-                font-size: 16px;
+                padding: 5px; 
+                font-size: 10px;
             }
             .h3{
-                margin: -0.5px;
+                margin: -0.2px;
             }
         
         }
