@@ -1,0 +1,41 @@
+@import url(./base.css);
+
+
+.imagens_historia{
+    width: 100%;
+    height: 100%;
+    
+}
+.container_historia{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+
+}
+.texto_historia{
+    margin: 2em;
+}
+#carouselExampleAutoplaying {
+    width: 40%;
+    height: 60vh; /* Altura em 60% da altura da viewport */
+    position: relative; /* Necessário para posicionar os botões */
+
+}
+
+#carouselExampleAutoplaying .carousel-inner img {
+    height: 100%; /* Garante que a imagem ocupe toda a altura do carrossel */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+#historia_carrossel{
+    max-width: 60vw;
+}
+.texto_historia {
+    margin-top: 20px;
+    text-align: justify;
+    
+}
+h1{
+    text-align: center;
+    font-size: 2.5em;
+}
