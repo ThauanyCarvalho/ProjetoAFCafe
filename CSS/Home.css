@@ -158,13 +158,14 @@ header img{
             }
             .caixa-principal{
                 max-width: 1024px;
-                margin-top: -200px;
+                margin-top: 1000px;
                 resize: both; 
                 padding: 5px; 
                 font-size: 10px;
             }
             .h3{
-                margin: -0.2px;
+                margin-top: 25px;
+
             }
         
         }
