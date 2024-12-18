@@ -41,7 +41,8 @@ header img{
 .flex-container{
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 80%;
+    margin:auto;
     
 }
    .produto{
@@ -64,7 +65,7 @@ header img{
    }
    .caixa-principal{
     position: absolute; 
-    bottom: 40%;
+    bottom: 60%;
     left: 70%;
     transform: translateX(-50%); 
     background-color: rgba(0, 0, 0, 0.7); 
@@ -72,8 +73,8 @@ header img{
     padding: 15px; 
     border-radius: 5px; 
     text-align:center; 
-    z-index:60; 
-    bottom:30%; 
+    z-index:20; 
+    bottom:20%; 
     left: 50%;
    } 
    .link-box{
@@ -104,8 +105,22 @@ header img{
         float:right;
     }
 
-    
-    @media (max-width: 853px) {
+    @media (max-width:430px) {
+        .caixa-principal h1{
+            font-size: 11px;
+        } 
+        .caixa-principal h4{
+            font-size: 10px;
+            float: right;
+        }
+        .caixa-principal{
+            padding: 0;
+            Top: -40%;
+            min-width: 10%;
+            top: -15px; /* Move a caixa mais para baixo */
+            
+            
+        }
         .link-box{
             margin: 0 auto; 
             display: block; 
@@ -125,12 +140,62 @@ header img{
         .flex-container{
             width: 100%;
             right: 100%;
+            z-index: 100%;
         }
         .content{
             right: 100%;
         }
+    }
+    @media (max-width: 390px) {
+        .link-box {
+            margin: 0 auto;
+            display: block;
+            width: fit-content;
+            padding: 8px 10px;
         }
-        @media (max-width: 1368px) {
+        
+        .container img {
+            width: 100px;
+            height: 300px;
+        }
+    
+        .col-md-7 {
+            margin: auto;
+            margin-left: auto;
+        }
+    
+        .flex-container {
+            width: 100%;
+            right: 100%;
+           
+        }
+    
+        .content {
+            right: 100%;
+        }
+    
+        .caixa-principal {
+            width: 90%; /* Usa uma largura relativa para ocupar a tela */
+            padding: px; /* Aumenta o espaçamento interno */
+            top: -20px; /* Move a caixa mais para baixo */
+            
+        }
+    
+        .caixa-principal h1 {
+            font-size: 10px; /* Tamanho do título */
+        }
+    
+        .caixa-principal h4 {
+            font-size: 9px; /* Tamanho do subtítulo */
+        }
+    
+        br {
+            display: none;
+        }
+    }
+
+        
+        @media (max-width: 1280px) {
             .link-box{
                 margin: 0 auto; 
                 display: block; 
@@ -156,19 +221,31 @@ header img{
                 right: 100%;
          
             }
-            .caixa-principal{
-                max-width: 1024px;
-                margin-top: 1000px;
-                resize: both; 
-                padding: 5px; 
-                font-size: 10px;
-            }
-            .h3{
-                margin-top: 25px;
+           .caixa-principal{
+            flex-direction: column; /* Empilha os elementos verticalmente */
+            text-align: center; /* Centraliza os textos dentro da div */
+            padding: 10px; /* Reduz o espaçamento interno */
 
-            }
+           }
+           h1 {
+            font-size: 24px; 
+            text-align: center; 
+            margin: 10px 0; 
+          }
         
+          h3 {
+            font-size: 16px; 
+            line-height: 1.4; 
+            text-align: center; 
+            margin: 0 15px; 
+          }
+        
+          br {
+            display: none; 
+          }
         }
+        
+        
 
 
       
