@@ -1,16 +1,43 @@
+<?php
+    require_once "validaUser.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="../CSS/base.css">
 
-    <link rel="icon" href="/imagens/LogoMarcaSfundo.png">
+    <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
+<?php
+
+$userName = $_SESSION['user_name'];
+$userLevel = $_SESSION['nivel_acesso'];
+
+switch ($userLevel) {
+    case 1:
+        $accessLevel = "Administrador";
+        break;
+    case 2:
+        $accessLevel = "Gerente";
+        break;
+    case 3:
+        $accessLevel = "Vendedor";
+        break;
+    case 4:
+        $accessLevel = "Cliente";
+        break;
+    default:
+        $accessLevel = "Desconhecido";
+}
+
+   ?> 
 
 <body>
 
@@ -34,99 +61,63 @@
             </svg>
         </button>
         <div class="logo_header">
-            <img src="/imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
+            <img src="../imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
         </div>
 
 
         <div class="navigation_header" id="navigation_header">
             <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
             </button>
-            <a href="localizacao.html">Localização</a>
+            <a href="Paginacontato.html">Localização</a>
             <a href="baseAf.html">Home</a>
             <a href="Historia.html">História</a>
             <a href="Produtos.html">Produtos</a>
 
         </div>
+        <ul class="navbar-nav">
+                        <?php if (isset($_SESSION['user_name'])): ?>
+                            <!-- Usuário Logado -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="alterar_perfil.php">Alterar Perfil</a></li>
+                                    <li><a class="dropdown-item" href="alterar_senha.php">Alterar Senha</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="logout.php">Sair</a></li>
+                                </ul>
+                            </li>
+                        <?php else: ?>
+                            <!-- Usuário Não Logado -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php"><i class="bi bi-person-circle"></i> Entrar</a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
         <a href="Login.html" id="login">Entrar</a>
     </div>
 
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-    <main>
-    <?php
-        if(filter_has_var(INPUT_POST,"salvar")) {
-            #Diretório onde vamos salvar as imagens
-            $diretorio = "imagensProdutos/";
-
-            #Verificando se o diretório existe
-            if(!is_dir($diretorio)){
-                die("O diretório '$diretorio' não existe");
-            }
-
-            #Verificando se o arquivo foi enviado
-            if(isset($_FILES["imagens"])){
-                $arquivo = $_FILES["imagens"];
-
-                #verifica se houve erro no upload do arquivo
-                if($arquivo['error']!== UPLOAD_ERR_OK){
-                    die("Erro ao fazer upload da imagem. Código do erro: ".$arquivo['error']);
-                }
-                #Pegar a extensão do arquivo
-                $extensao = strtolower(pathinfo(basename($arquivo['name']), PATHINFO_EXTENSION));
-                #Gera o nome unico do arquivo
-                $nomeArquivo = uniqid().'.'.$extensao;
-                $caminhoArquivo = $diretorio . $nomeArquivo;
-                #Move o arquivo para o diretório especificado
-                if(!move_uploaded_file($arquivo['tmp_name'],$caminhoArquivo)){
-                    die('Erro ao mover o arquivo');
-                }
-            }else{
-                die("Nenhum arquivo foi enviado");
-            }#Fim de Upload da Imagem
-
-            spl_autoload_register(function($class){
-                require_once("Classes/{$class}.class.php");
-            });
-
-            $Produtos = new Produtos;
-            $Produtos->setNome(filter_input(INPUT_POST, 'nome'));
-            $Produtos->setPreco(filter_input(INPUT_POST, 'preco'));
-            $Produtos->setId(filter_input(INPUT_POST, 'id'));
-            $Produtos->setDescricao(filter_input(INPUT_POST, 'descricao'));
-            $Produtos->setImagem($nomeArquivo);
-
-            $Produtos->add() ;
-
-
-        }
-        ?>
-
-        <div class="container">
-            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" class="row g3" enctype="multipart/form-data">
-                <h2 class="text-center">Adicionar Produto</h2>
-            
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome do Produto</label>
-                    <input type="text" name="nome"class="form-control" id="nome" placeholder="">
-                </div>
-                <div class="mb-3">
-                    <label for="decricao" class="form-label">Decrição</label>
-                    <input type="text" name="decricao"class="form-control" id="decricao" placeholder="">
-                </div>
-                <div class="mb-3">
-                    <label for="preco" class="form-label">Preço</label>
-                    <input type="number" name="preco" id="preco" placeholder="" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="imagens" class="form-label">Imagem do produto</label>
-                    <input type="file" name="imagens" id="imagens" placeholder="" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
-            </form>
+            <main>
+            <div class="container mt-5">
+        <h1>Bem-vindo, <?php echo htmlspecialchars($userName); ?>!</h1>
+        <p>Você está acessando o sistema como: <strong><?php echo $accessLevel; ?></strong></p>
+        
+        <div class="mt-4">
+            <a href="logout.php" class="btn btn-danger">Sair</a>
         </div>
-    </main>
-    <footer>
+    </div>
+                    
+            </main>
+    
+
+        <footer>
             <div id="footer_content">
                 <div id="footer_contacts" class="footer_contacts">
                     <div>
@@ -136,11 +127,11 @@
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">
-                        <a href="#" class="footer-link " id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/af.cafe2018?igsh=cG84ZjVxZmYzMDg0" class="footer-link " id="instagram"><i class="fa-brands fa-instagram"></i></a>
     
 
     
-                        <a href="#" class="footer-link " id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F%2B5569999798988%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZrMi16IscipJ9wli3ikh83Ii-JxOSBBOS8L4KbWLfaYdGh8a2ccvnrodk_aem_gIWpfvH2n3r61eBqPkWoGQ&e=AT2ubaDQW20O4lNgIoJUPBl0Qwm3IVl7jzLvVZW7yP8onK6FAeYTdag_TVIf8K74s6pXq02ZOtU3Kqy2rVdoTOQWGksUFqVqii0XFw" class="footer-link " id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <ul class="footer-list">
@@ -186,6 +177,17 @@
                 2024 copyright reserved
             </div>
         </footer>
+    </div>
+
+    
+
+
+    <script src="../JS/Base.js"></script>
+    <script src="../JS/premio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
+

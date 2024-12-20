@@ -4,13 +4,13 @@ final class Database{
     
     private static $host = "localhost"; #endereço do banco de dados
 
-    private static $dbname = "afCafe"; #nome do banco de dados
+    private static $dbname = "campoDigital"; #nome do banco de dados
 
     private static $port = "3306"; #porta de conexão
 
     private static $username = "root"; #usuaio do banco de dados
 
-    private static $password = ""; #a senha do banco de dados
+    private static $password = "root"; #a senha do banco de dados
 
     private static $charset = "utf8mb4"; #tipo de caracteres
 

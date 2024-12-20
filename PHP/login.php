@@ -11,6 +11,18 @@
 
     <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
+<?php
+    if (filter_has_var(INPUT_POST, "logar")) {
+        spl_autoload_register(function ($class) {
+          require_once "../classes/{$class}.class.php" ;
+        });
+        $usuario = new Usuario;
+        $usuario->setNome(filter_input(INPUT_POST, 'nome'));
+        $usuario->setSenha(filter_input(INPUT_POST,  'senha'));
+        $mensagem = $usuario->login();
+        echo "<script>alert('$mensagem');</script>";
+    }
+?>
 
 
 
@@ -55,25 +67,21 @@
         
             <main >
                 <div class="tela_login">
-                <form action="/submit" method="post">
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <input type="hidden" name="redirect" value="<?php echo isset($_GET['redirect']) ? htmlspecialchars($_GET['redirect']) : '../PHP/dashboard.php'; ?>">
                         <img src="../imagens/LogoMarcaSfundo.png" alt="" class="imagem_tela_login">
                         <h1>Login</h1>
+                       <input type="text" id="nome" placeholder="Usuário" name="nome">
+                       <br><br>
+                     <input type="password"  id="senha" placeholder="Senha" name="senha">
+                       <br><br>
                         
-                       <input type="text" placeholder="Nome">
-                       <br><br>
-        
-                       <input type="password" placeholder="Senha">
-                       <br><br>
-                        <div class="button_main">
-                            <button type="submit">Enviar</button>
-                            <button >Cadastro</button>
-                        </div>
-                       
+                       <button type="submit" class="btn btn-primary" name="logar">Entrar</button>     
+                </form>       
                 </div>
-            </form>
+                
                 
             </main>
-    
 
         <footer>
             <div id="footer_content">

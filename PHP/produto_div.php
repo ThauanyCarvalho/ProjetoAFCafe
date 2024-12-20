@@ -63,16 +63,15 @@
             <!-- Código php inicio -->
             <?php 
 spl_autoload_register(function ($class) {
-    require_once '../PHP/Produto.class.php';
+    require_once '../Classes/Produto.class.php';
 }); 
-                $produto = new Produto;
+                $produto = new Produtos;
                 $produtos = $produto->all();
                 foreach ($produtos as $umProduto) {
                  ?>
                 <div class="item-linha">
                 <h1><?php echo $umProduto->nomeProduto ?></h1>
                 <img src="../PHP/imagensProdutos/<?php echo $umProduto->foto ?>" alt="imagens">
-   
             </div>
                  <?php  
                 }

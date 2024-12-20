@@ -15,6 +15,7 @@
 <body>
 
         <?php
+        require_once 'C:/xampp/htdocs/ProjetoAFCafe/Classes/Produto.class.php';
 
         if(filter_has_var(INPUT_POST,"salvar")) {
             #Diretório onde vamos salvar as imagens
@@ -46,13 +47,9 @@
                 die("Nenhum arquivo foi enviado");
             }#Fim de Upload da Imagem
 
-            spl_autoload_register(function($class){
-                require_once 'C:/xampp/htdocs/ProjetoAFCafe/PHP/Produto.class.php';
-            });
-
-            $produto = new Produto;
-            $produto->setNome(filter_input(INPUT_POST, 'nome'));
-            $produto->setDescricao(filter_input(INPUT_POST, 'descricao'));
+            $produto = new Produtos;
+            $produto->setNomeProduto(filter_input(INPUT_POST, 'nome'));
+            $produto->setDescricaoProduto(filter_input(INPUT_POST, 'descricao'));
             $produto->setFoto($nomeArquivo);
 
             if ($produto->add()){
