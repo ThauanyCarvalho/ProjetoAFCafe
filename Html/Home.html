@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/CSS/Home.css">
+
+  <link rel="icon" href="/imagens/LogoMarcaSfundo.png">
+</head>
+
+<body>
+
+  <div class="header" id="header">
+    <div class="navigation_resp" id="navigation_resp">
+      <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
+      </button>
+      <a href="localizacao.html">Localização</a>
+      <a href="Home.html">Home</a>
+      <a href="Historia.html">História</a>
+      <a href="Premios.html">Premios</a>
+
+    </div>
+
+
+    <button onclick="toggleSideBar()" class="btn_icon_header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+      </svg>
+    </button>
+    <div class="logo_header">
+      <img src="/imagens/LogoMarcaSfundo.png" class="img_logo_header" alt="Logo AF Café">
+    </div>
+
+
+    <div class="navigation_header" id="navigation_header">
+      <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
+      </button>
+      <a href="localizacao.html">Localização</a>
+      <a href="Home.html">Home</a>
+      <a href="Historia.html">História</a>
+      <a href="Produtos.html">Produtos</a>
+
+    </div>
+    <a href="Login.html" id="login">Entrar</a>
+  </div>
+
+  
+  <div tabindex="0" onclick="closeSideBar()" class="content" id="content"></div>
+  <div class="carousel-caption d-none d-md-block">
+  </div>
+    <main>
+      <div class="flex-container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagens/cafe claro.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="caixa-principal">
+              <h1>A.F Café</h1>
+              <h4>Sempre buscando inovação para <br> garantir o melhor produto <br> desde o grão ao café na sua mesa
+              </h4>
+            </div>
+            <div class="carousel-item">
+              <img src="../imagens/cafe escuro.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../imagens/lavoura.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    
+    
+    <div class="container ma">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary"></span></h2>
+          <p class="lead">
+          <h1><i><strong>Conheça nossos cafés</strong></i></p>
+          </h1>
+          <p>Descubra sabores únicos e experiências inesquecíveis. Nossos grãos são cuidadosamente selecionados e
+            torrados para trazer o melhor de cada xícara. Explore nosso menu e encontre o café perfeito para cada
+            momento do seu dia.</p>
+          <div class="link-box">
+            <a href="../Html/Produtos.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="../imagens/cafe produto preto.png" alt="">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary"></span></h2>
+          <p class="lead">
+          <h1><i><strong>Conheça nossos pontos de vendas</strong></i></p>
+          </h1>
+          <p>Encontre o aroma e o sabor do nosso café mais perto de você! Visite nossos pontos de venda e experimente
+            uma experiência única, seja para saborear uma xícara no local ou levar para casa nossos produtos
+            selecionados. Estamos sempre prontos para tornar o seu dia mais especial. </p>
+          <div class="link-box">
+            <a href="">Veja mais</a>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <div class="img_ponto">
+          <img src="../imagens/pontos de venda.png" alt="">
+        </div>
+      </div>
+    </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary"></span></h2>
+          <p class="lead">
+          <h1><i><strong>Conheça mais sobre nós</i></strong></h1>
+          <p>Somos Arildo e Lucilene, cafeicultores de Rondônia, dedicados à produção de cafés especiais com foco em
+            qualidade e sustentabilidade. Superamos desafios, inovamos em práticas ambientais e, em 2023, conquistamos o
+            prêmio de 2º melhor Canéfora do Brasil. Agora, construímos nossa agroindústria para torrar e levar nossos
+            cafés ao mercado, sempre respeitando o meio ambiente.</p>
+          <div class="link-box">
+            <a href="historia.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="../imagens/familia sobre nos.png" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contacts" class="footer_contacts">
+          <div>
+
+          </div>
+          <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+          <p>O melhor produto do <br> grão ao café para você</p>
+
+          <div id="footer_social_media">
+            <a href="https://www.instagram.com/af.cafe2018?igsh=MXNvNWtrZzVwZWhhYQ==" class="footer-link " id="instagram"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+            <a href="https://wa.me/+5569999798988." class="footer-link " id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <h3>Produtos</h3>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Café Especial</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Licor de Café</a>
+          </li>
+
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <h3>Localização</h3>
+          </li>
+          <li>
+            Sitio Mandacaru, Nossa Senhora Aparecida e São João Batista.
+          </li>
+          <li>
+            linhas 06 e 07 lotes 69B, 69D e 1024
+          </li>
+          <li>
+            Municipío De Ministro Andreazza
+          </li>
+        </ul>
+        <div id="footer_subscribe">
+          <h3>Inscreva-se</h3>
+          <p>
+            Increva seu email para receber as melhores ofertas
+          </p>
+          <div id="input_group">
+            <input type="email" id="email" placeholder="Email*">
+            <button><i class="fa-regular fa-envelope"></i></button>
+          </div>
+        </div>
+
+      </div>
+      <div id="footer_copyright">
+        &#169
+        2024 copyright reserved
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  <script src="/JS/Base.js"></script>
+  <script src="/JS/premio.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

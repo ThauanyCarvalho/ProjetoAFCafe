@@ -53,10 +53,9 @@
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-    <main >
-        <div class="containercad">
+    <main class="container mt-3">
         <div class="mb-3">
-            <a href="cadProduto.php" class="btn btn-warning">Novo Produto</a>
+            <a href="cadProduto.php" class="btn btn-warning">Novo Aluno</a>
         </div>
 
         <div class="linha">
@@ -73,14 +72,14 @@ spl_autoload_register(function ($class) {
                 <h1><?php echo $umProduto->nomeProduto ?></h1>
                 <img src="../PHP/imagensProdutos/<?php echo $umProduto->foto ?>" alt="imagens">
             </div>
-                 <?php  
-                }
-            ?>
-            
-        </div>
+                <?php
+             }
 
+            ?>
+            <!-- Inicio apagar -->
+            
+            <!-- fim apagar -->
         </div>
-        
     </main>
 
 
