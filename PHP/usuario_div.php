@@ -66,7 +66,7 @@
             <!-- Código php inicio -->
             <?php 
 spl_autoload_register(function ($class) {
-    require_once '../PHP/Usuario.class.php';
+    require_once '../Classes/Usuario.class.php';
 }); 
                 $usuario = new Usuario;
                 $usuarios = $usuario->all();

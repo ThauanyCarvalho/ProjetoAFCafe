@@ -14,6 +14,54 @@
 
 <body>
 
+        <?php
+        require_once 'C:/xampp/htdocs/ProjetoAFCafe/Classes/Produto.class.php';
+
+        if(filter_has_var(INPUT_POST,"salvar")) {
+            #Diretório onde vamos salvar as imagens
+            $diretorio = "imagensProdutos/";
+
+            #Verificando se o diretório existe
+            if(!is_dir($diretorio)){
+                die("O diretório '$diretorio' não existe");
+            }
+
+            #Verificando se o arquivo foi enviado
+            if(isset($_FILES["foto"])){
+                $arquivo = $_FILES["foto"];
+
+                #verifica se houve erro no upload do arquivo
+                if($arquivo['error']!== UPLOAD_ERR_OK){
+                    die("Erro ao fazer upload da imagem. Código do erro: ".$arquivo['error']);
+                }
+                #Pegar a extensão do arquivo
+                $extensao = strtolower(pathinfo(basename($arquivo['name']), PATHINFO_EXTENSION));
+                #Gera o nome unico do arquivo
+                $nomeArquivo = uniqid().'.'.$extensao;
+                $caminhoArquivo = $diretorio . $nomeArquivo;
+                #Move o arquivo para o diretório especificado
+                if(!move_uploaded_file($arquivo['tmp_name'],$caminhoArquivo)){
+                    die('Erro ao mover o arquivo');
+                }
+            }else{
+                die("Nenhum arquivo foi enviado");
+            }#Fim de Upload da Imagem
+
+            $produto = new Produtos;
+            $produto->setNomeProduto(filter_input(INPUT_POST, 'nome'));
+            $produto->setDescricaoProduto(filter_input(INPUT_POST, 'descricao'));
+            $produto->setFoto($nomeArquivo);
+
+            if ($produto->add()){
+                header('Location: produto_div.php');
+            }else{
+                echo'Erro ao inserir o Produto';
+            }
+
+        }
+        ?>
+
+
     <div class="header" id="header">
         <div class="navigation_resp" id="navigation_resp">
             <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">

@@ -4,15 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Produtos</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/Login.css">
 
     <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
+<?php
+    if (filter_has_var(INPUT_POST, "logar")) {
+        spl_autoload_register(function ($class) {
+          require_once "../classes/{$class}.class.php" ;
+        });
+        $usuario = new Usuario;
+        $usuario->setNome(filter_input(INPUT_POST, 'nome'));
+        $usuario->setSenha(filter_input(INPUT_POST,  'senha'));
+        $mensagem = $usuario->login();
+        echo "<script>alert('$mensagem');</script>";
+    }
+?>
 
-<body>
+
 
     <div class="header" id="header">
         <div class="navigation_resp" id="navigation_resp">
@@ -41,49 +53,35 @@
         <div class="navigation_header" id="navigation_header">
             <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
             </button>
-            <a href="localizacao.html">Localização</a>
+            <a href="Paginacontato.html">Localização</a>
             <a href="baseAf.html">Home</a>
             <a href="Historia.html">História</a>
             <a href="Produtos.html">Produtos</a>
 
         </div>
-        <a href="Login.html" id="login">Entrar</a>
+        <a href="login.html" id="login">Entrar</a>
     </div>
 
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-    <main class="container mt-3">
-        <div class="mb-3">
-            <a href="cadProduto.php" class="btn btn-warning">Novo Aluno</a>
-        </div>
-
-        <div class="linha">
-            <!-- Código php inicio -->
-            <?php 
-spl_autoload_register(function ($class) {
-    require_once '../Classes/Produto.class.php';
-}); 
-                $produto = new Produtos;
-                $produtos = $produto->all();
-                foreach ($produtos as $umProduto) {
-                 ?>
-                <div class="item-linha">
-                <h1><?php echo $umProduto->nomeProduto ?></h1>
-                <img src="../PHP/imagensProdutos/<?php echo $umProduto->foto ?>" alt="imagens">
-            </div>
-                <?php
-             }
-
-            ?>
-            <!-- Inicio apagar -->
-            
-            <!-- fim apagar -->
-        </div>
-    </main>
-
-
-    
+            <main >
+                <div class="tela_login">
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <input type="hidden" name="redirect" value="<?php echo isset($_GET['redirect']) ? htmlspecialchars($_GET['redirect']) : '../PHP/dashboard.php'; ?>">
+                        <img src="../imagens/LogoMarcaSfundo.png" alt="" class="imagem_tela_login">
+                        <h1>Login</h1>
+                       <input type="text" id="nome" placeholder="Usuário" name="nome">
+                       <br><br>
+                     <input type="password"  id="senha" placeholder="Senha" name="senha">
+                       <br><br>
+                        
+                       <button type="submit" class="btn btn-primary" name="logar">Entrar</button>     
+                </form>       
+                </div>
+                
+                
+            </main>
 
         <footer>
             <div id="footer_content">
@@ -91,7 +89,7 @@ spl_autoload_register(function ($class) {
                     <div>
                         
                     </div>
-                    <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+                    <img src="../imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">
@@ -134,7 +132,7 @@ spl_autoload_register(function ($class) {
                         Increva seu email para receber as melhores ofertas
                     </p>
                     <div id="input_group">
-                        <input type="email" id="email" placeholder="Email*">
+                        <input type="email" id="email">
                         <button><i class="fa-regular fa-envelope"></i></button>
                     </div>
                 </div>
@@ -153,10 +151,6 @@ spl_autoload_register(function ($class) {
     <script src="../JS/Base.js"></script>
     <script src="../JS/premio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>

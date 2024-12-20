@@ -1,6 +1,6 @@
 <?php
 // Definir variáveis para armazenar os valores do formulário
-$nome = $email = $senha = $status = '';
+$nome = $email = $senha = $nivel_acesso = '';
 
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,21 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = filter_input(INPUT_POST, 'nome');
     $email = filter_input(INPUT_POST, 'email');
     $senha = filter_input(INPUT_POST, 'senha');
-    $status = filter_input(INPUT_POST, 'status');
+    $nivel_acesso = filter_input(INPUT_POST, 'nivel_acesso');
 
     // Verificar se os campos obrigatórios não estão vazios
-    if (empty($nome) || empty($email) || empty($senha) || empty($status)) {
+    if (empty($nome) || empty($email) || empty($senha) || empty($nivel_acesso)) {
         echo 'Todos os campos são obrigatórios!';
     } else {
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
         // Criar o usuário e adicionar ao banco
         spl_autoload_register(function($class){
-            require_once 'C:/xampp/htdocs/ProjetoAFCafe/PHP/Usuario.class.php';
+            require_once 'C:/xampp/htdocs/ProjetoAFCafe/Classes/Usuario.class.php';
         });
         $usuario = new Usuario;
         $usuario->setNome($nome);
         $usuario->setEmail($email);
-        $usuario->setSenha($senha); 
-        $usuario->setStatus($status);
+        $usuario->setSenha($senhaHash); 
+        $usuario->setNivel_acesso($nivel_acesso);
 
         if ($usuario->add()) {
             // Redireciona para outra página após sucesso
@@ -107,11 +108,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="col-md-4 mb-3">
                 <label for="status" class="form-label">Nivel de Acesso</label>
-                <select name="status" id="status" class="form-select">
+                <select name="nivel_acesso" id="nivel_acesso" class="form-select">
                     <option>Selecione o status</option>
-                    <option value="usu" <?php echo ($status == 'usu' ? 'selected' : ''); ?>>Usuário</option>
-                    <option value="admin" <?php echo ($status == 'admin' ? 'selected' : ''); ?>>Administrador</option>
-                    <option value="max" <?php echo ($status == 'max' ? 'selected' : ''); ?>>Máximo</option>
+                    <option value="usu" <?php echo ($nivel_acesso == 'usu' ? 'selected' : ''); ?>>Usuário</option>
+                    <option value="admin" <?php echo ($nivel_acesso == 'admin' ? 'selected' : ''); ?>>Administrador</option>
+                    <option value="max" <?php echo ($nivel_acesso == 'max' ? 'selected' : ''); ?>>Máximo</option>
                 </select>
             </div>
             <div class="col-12 mb-3">
@@ -129,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div>
                         
                     </div>
-                    <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+                    <img src="./imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">

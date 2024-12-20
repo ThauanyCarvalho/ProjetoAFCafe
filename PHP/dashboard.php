@@ -1,18 +1,45 @@
+<?php
+    require_once "validaUser.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="../CSS/base.css">
 
     <link rel="icon" href="../imagens/LogoMarcaSfundo.png">
 </head>
+<?php
 
+$userName = $_SESSION['user_name'];
+$userLevel = $_SESSION['nivel_acesso'];
 
+switch ($userLevel) {
+    case 1:
+        $accessLevel = "Administrador";
+        break;
+    case 2:
+        $accessLevel = "Gerente";
+        break;
+    case 3:
+        $accessLevel = "Vendedor";
+        break;
+    case 4:
+        $accessLevel = "Cliente";
+        break;
+    default:
+        $accessLevel = "Desconhecido";
+}
+
+   ?> 
+
+<body>
 
     <div class="header" id="header">
         <div class="navigation_resp" id="navigation_resp">
@@ -41,37 +68,52 @@
         <div class="navigation_header" id="navigation_header">
             <button type="button" class="btn_icon_header btn-close" aria-label="Close" onclick="toggleSideBar()">
             </button>
-            <a href="localizacao.html">Localização</a>
+            <a href="Paginacontato.html">Localização</a>
             <a href="baseAf.html">Home</a>
             <a href="Historia.html">História</a>
             <a href="Produtos.html">Produtos</a>
 
         </div>
-        <a href="login.html" id="login">Entrar</a>
+        <ul class="navbar-nav">
+                        <?php if (isset($_SESSION['user_name'])): ?>
+                            <!-- Usuário Logado -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="alterar_perfil.php">Alterar Perfil</a></li>
+                                    <li><a class="dropdown-item" href="alterar_senha.php">Alterar Senha</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="logout.php">Sair</a></li>
+                                </ul>
+                            </li>
+                        <?php else: ?>
+                            <!-- Usuário Não Logado -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php"><i class="bi bi-person-circle"></i> Entrar</a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+        <a href="Login.html" id="login">Entrar</a>
     </div>
 
 
     <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
         
-            <main >
-                <div class="tela_login">
-                <form action="/submit" method="post">
-                        <img src="../imagens/LogoMarcaSfundo.png" alt="" class="imagem_tela_login">
-                        <h1>Login</h1>
-                        
-                       <input type="text" placeholder="Nome">
-                       <br><br>
+            <main>
+            <div class="container mt-5">
+        <h1>Bem-vindo, <?php echo htmlspecialchars($userName); ?>!</h1>
+        <p>Você está acessando o sistema como: <strong><?php echo $accessLevel; ?></strong></p>
         
-                       <input type="password" placeholder="Senha">
-                       <br><br>
-                        <div class="button_main">
-                            <button type="submit">Enviar</button>
-                            <button >Cadastro</button>
-                        </div>
-                       
-                </div>
-            </form>
-                
+        <div class="mt-4">
+            <a href="logout.php" class="btn btn-danger">Sair</a>
+        </div>
+    </div>
+                    
             </main>
     
 
@@ -81,7 +123,7 @@
                     <div>
                         
                     </div>
-                    <img src="../imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
+                    <img src="/imagens/LogoMarcaSfundo.png" class="LogoMarcaSfundo" alt="">
                     <p>O melhor produto do <br> grão ao café para você</p>
     
                     <div id="footer_social_media">
@@ -124,7 +166,7 @@
                         Increva seu email para receber as melhores ofertas
                     </p>
                     <div id="input_group">
-                        <input type="email" id="email">
+                        <input type="email" id="email" placeholder="Email*">
                         <button><i class="fa-regular fa-envelope"></i></button>
                     </div>
                 </div>
@@ -148,3 +190,4 @@
 </body>
 
 </html>
+

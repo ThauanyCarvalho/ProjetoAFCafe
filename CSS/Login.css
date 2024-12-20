@@ -30,11 +30,12 @@ h1{
     text-align: center;
     width: 30vw;
     height: 80vh;
+    max-height: max-content;
     background-color: var(--color-neutral-40);
     padding: 80px;
     display: block;
     margin: 0 auto;
-    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.2);;    
 }
 .imagem_tela_login{
     width: 7.5em;
@@ -54,22 +55,19 @@ input{
     border: none;
     border-radius: 10px;
     background-color: var(--color-brown);
-}
-.button_main{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    margin: 5px;
 }
 main{
     background-image: linear-gradient( to right, var(--color-coffe),var(--color-coffe2),var(--color-coffe3) ); ;
     
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1100px) {
     .tela_login{
         width: 90vw;
         height: 80vh;
+        max-width: max-content;
+
     }
     .imagem_tela_login{
         width: 7.5em;
@@ -84,9 +82,5 @@ main{
     button{
         margin-top: 3px;
         width: fit-content;
-    }
-    .button_main{
-        display: flex;
-        flex-direction: column;
     }
 }
